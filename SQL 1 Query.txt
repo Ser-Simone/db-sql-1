@@ -1,0 +1,73 @@
+1. tutti gli insegnanti
+
+SELECT * FROM teachers
+
+--------------------------
+2. tutti i capi di dipartimento
+
+SELECT head_of_department
+ FROM departments 
+----------------------------------
+
+
+3. tutti i corsi di laurea magistrale
+
+SELECT * FROM degrees
+WHERE level='magistrale';
+----------------------------------------
+
+4. tutti gli studenti marco
+
+SELECT * FROM students
+WHERE name='marco';
+----------------------------------
+
+5. tutti i corsi >= 12
+
+SELECT * FROM courses
+WHERE cfu>='12';
+-------------------------------------------
+
+6.
+
+SELECT * FROM courses
+WHERE cfu>'10' OR cfu<'5';
+
+--------------------------------------------------
+
+7.
+
+SELECT * FROM courses
+WHERE period='I semestre' AND year='1';
+-------------------------------------------------
+
+8.
+SELECT * FROM courses
+WHERE website is null;
+--------------------------------------------------
+
+9.
+
+SELECT * FROM teachers
+WHERE phone is not null;
+---------------------------------------------------
+
+10.
+
+SELECT * FROM students
+WHERE name like'E%'
+----------------------------------------------------
+
+11.
+
+SELECT count (*)
+FROM teachers
+WHERE name LIKE  'E%' 
+----------------------------------------------------
+
+12.
+
+SELECT count (*)
+FROM teachers
+WHERE phone is NULL
+----------------------------------------------------
